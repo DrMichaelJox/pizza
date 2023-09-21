@@ -18,8 +18,12 @@ from django.contrib import admin
 from django.urls import path
 from api.views import hello
 from api.views import getPizzas
+from .views import templateHello, templatePizza
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', hello),
-    path('pizzas/', getPizzas)
+    path('pizzas/', getPizzas),
+    path('', templateHello),
+    path('tpizza/', templatePizza)
 ]
